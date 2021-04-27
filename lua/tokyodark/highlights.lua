@@ -112,11 +112,11 @@ hl.syntax = {
     Special = hl.predef.Purple,
     SpecialChar = hl.predef.Purple,
     Boolean = hl.predef.Purple,
-    String = hl.predef.Yellow,
-    Character = hl.predef.Yellow,
-    Number = hl.predef.Purple,
-    Float = hl.predef.Purple,
-    Function = hl.predef.Green,
+    String = hl.predef.Green,
+    Character = hl.predef.Green,
+    Number = hl.predef.Orange,
+    Float = hl.predef.Orange,
+    Function = hl.predef.Blue,
     Operator = hl.predef.Red,
     Title = hl.predef.Yellow,
     Tag = hl.predef.Orange,
@@ -140,6 +140,22 @@ hl.plugins.lsp = {
     LspDiagnosticsUnderlineHint = {underline = true, sp = u.color_gamma(p.purple, 0.5)},
     LspDiagnosticsUnderlineInformation = {underline = true, sp = u.color_gamma(p.blue, 0.5)},
     LspDiagnosticsUnderlineWarning = {underline = true, sp = u.color_gamma(p.yellow, 0.5)}
+}
+
+hl.plugins.treesitter = {
+  TSConstructor = hl.predef.Orange,
+  TSField = hl.predef.Green,
+  TSKeyword = hl.predef.Purple,
+  TSKeywordFunction = hl.predef.Blue,
+  TSLabel = hl.predef.Blue,
+  TSoperator = hl.predef.Red,
+  TSParameter = hl.predef.Orange,
+  TSProperty = hl.predef.Purple,
+  TSPunctDelimiter = hl.predef.Red,
+  TSPunctBracket = {fg = u.color_gamma(p.grey, 1.5)},
+  TSPunctSpecial = {fg = u.color_gamma(p.grey, 1.5)},
+  TSVariable = hl.predef.Red,
+  TSVariableBuiltin = hl.predef.Red,
 }
 
 hl.plugins.whichkey = {
@@ -192,6 +208,11 @@ hl.plugins.gitsigns = {
     GitSignsDelete = hl.predef.Red,
     GitSignsDeleteLn = hl.predef.Red,
     GitSignsDeleteNr = hl.predef.Red
+}
+
+hl.plugins.ale = {
+  AleErrorSign = hl.predef.Red,
+  AleWarningSign = hl.predef.Yellow
 }
 
 hl.langs.markdown = {
